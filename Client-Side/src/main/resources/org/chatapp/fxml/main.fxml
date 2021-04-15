@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="533.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.chatapp.MainController">
+   <children>
+      <AnchorPane fx:id="profile" layoutX="-1.0" prefHeight="532.0" prefWidth="230.0">
+         <children>
+            <TextField fx:id="searchRequest" layoutX="15.0" layoutY="157.0" prefHeight="26.0" prefWidth="158.0" promptText="Search . . ." />
+            <Pane layoutX="6.0" prefHeight="152.0" prefWidth="221.0">
+               <children>
+                  <ImageView fx:id="avatar" fitHeight="92.0" fitWidth="100.0" layoutX="70.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/avatarMale.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="phoneNumber" alignment="CENTER" layoutX="8.0" layoutY="128.0" prefHeight="16.0" prefWidth="200.0" text="+..." textFill="#244951">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name" alignment="CENTER" layoutX="8.0" layoutY="106.0" prefHeight="16.0" prefWidth="200.0" text="unkonwn" textFill="#244951">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="logout" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="28.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="settings" layoutX="187.0" layoutY="5.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="28.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+<!--            <JFXSpinner fx:id="spinnerProgPhoto" layoutX="46.0" layoutY="8.0" prefHeight="140.0" prefWidth="140.0" visible="false" />-->
+            <Button layoutX="179.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#addContact" prefHeight="16.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ListView fx:id="listFriends" layoutX="7.0" layoutY="190.0" prefHeight="335.0" prefWidth="215.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="msg" layoutX="228.0" prefHeight="532.0" prefWidth="528.0">
+         <children>
+            <ImageView fitHeight="532.0" fitWidth="528.0" layoutY="-1.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/background.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="229.0" layoutY="176.0" opacity="0.8" text="JChat" textFill="#3d4beb">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="141.0" fitWidth="140.0" layoutX="212.0" layoutY="227.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/chat-256.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

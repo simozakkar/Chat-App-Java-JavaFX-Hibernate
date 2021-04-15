@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="532.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.chatapp.setNumPhController">
+   <children>
+      <ImageView fitHeight="141.0" fitWidth="140.0" layoutX="322.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chat-256.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="numberPhone" layoutX="380.0" layoutY="305.0" prefHeight="26.0" prefWidth="112.0" promptText="Phone number" />
+      <TextField fx:id="flagsCode" layoutX="318.0" layoutY="305.0" prefHeight="26.0" prefWidth="59.0" text="+212" />
+      <ImageView fx:id="imgView" fitHeight="26.0" fitWidth="28.0" layoutX="284.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/flags/maroc.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="sendCode" layoutX="348.0" layoutY="339.0" mnemonicParsing="false" text="Send Code" visible="false" />
+      <Label layoutX="352.0" layoutY="26.0" text="Welcome to" />
+      <Label layoutX="336.0" layoutY="49.0" text="JChat" textFill="#3d4beb">
+         <font>
+            <Font name="DejaVu Serif Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="296.0" layoutY="250.0" text="JChat will send you a SMS" />
+      <Label layoutX="284.0" layoutY="276.0" text="containing a verification code" />
+      <ProgressIndicator fx:id="spinnerProgerss" layoutX="360.0" layoutY="336.0" prefHeight="33.0" prefWidth="66.0" visible="false" />
+      <Pane fx:id="paneCheckCode" layoutX="291.0" layoutY="381.0" prefHeight="133.0" prefWidth="200.0" visible="false">
+         <children>
+            <Label layoutX="13.0" layoutY="6.0" text="Enter the verification code" />
+            <TextField fx:id="code1" layoutX="31.0" layoutY="29.0" prefHeight="26.0" prefWidth="26.0" />
+            <TextField fx:id="code2" layoutX="62.0" layoutY="29.0" prefHeight="26.0" prefWidth="26.0" />
+            <TextField fx:id="code3" layoutX="93.0" layoutY="29.0" prefHeight="26.0" prefWidth="26.0" />
+            <TextField fx:id="code4" layoutX="124.0" layoutY="29.0" prefHeight="26.0" prefWidth="26.0" />
+            <Button fx:id="check" layoutX="60.0" layoutY="65.0" mnemonicParsing="false" text="Check" visible="false" />
+            <ProgressIndicator fx:id="spinnerProgerssCheckButton" layoutX="58.0" layoutY="62.0" prefHeight="33.0" prefWidth="66.0" visible="false" />
+            <Label fx:id="wrong" alignment="CENTER" layoutX="50.0" layoutY="103.0" text="code is wrong" textFill="#f20000" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
