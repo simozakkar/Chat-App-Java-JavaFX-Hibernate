@@ -27,16 +27,20 @@ public class SendCode implements Runnable{
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socketChannel.socket().getInputStream()));
             String numero = bufferedReader.readLine();
+            // Default Validation code
+            String  valCode = "1111";
+
             // Generate Validation code
-            String  valCode = getRandomNumber(1000, 9999).toString();
-//            String  valCode = "1111";
+//            String  valCode = getRandomNumber(1000, 9999).toString();
             // Send a validation code
-            SMSSender smsSender = new SMSSender();
-            try {
-                smsSender.sendSmsPost("tx0hdT8mRzztChLoUsx3QmzLPLcHdHXd", "JChat : The validation code is : "+valCode, numero.substring(1), "JChat", "0");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            SMSSender smsSender = new SMSSender();
+//            try {
+//                // Go to https://www.smsmode.com/en/ create a new account
+//                // Create a access key ....
+//                smsSender.sendSmsPost("AccessToken", "The validation code is : "+valCode, numero.substring(1), "Emetteur", "0");
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
             // Insert
             insertCodeValidition(new CodeValidation(numero, valCode));
